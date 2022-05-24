@@ -3,11 +3,12 @@ def cocktailsort(data):
     end = len(data) - 1
     start = 0
 
-    while swp == True:
+    while swp:
         swp = False
         for i in range(start, end):  # Forward Iteration
             if data[i] > data[i+1]:
                 data[i], data[i+1] = data[i+1], data[i]
+                yield 
                 swp = True
         
         if swp == False:  # Break if no swaps occur
