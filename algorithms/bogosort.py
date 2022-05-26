@@ -1,7 +1,7 @@
 import random
 
 def bogosort(data):
-    def sorted(data):
+    def _sorted(data):
         if len(data) < 2:
             return True 
         for i in range(len(data) - 1):
@@ -9,13 +9,8 @@ def bogosort(data):
                 return False
         return True
 
-    while not sorted(data):
+    while not _sorted(data):
         random.shuffle(data)
         yield data
     yield data
-
-if __name__ == "__main__":
-    a =bogosort([3, 2, 1])
-    for i in a:
-        print(i)
 
