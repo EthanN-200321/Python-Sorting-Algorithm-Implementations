@@ -1,29 +1,32 @@
-def mergesort(data):
-    file = open("./outputs/mergesort_output", 'a+')
-    file.truncate()
-    if len(data) <= 1:
-        return data
-
-    mid = len(data) // 2
-    l = mergesort(data[mid:])
-    r = mergesort(data[:mid])
-
+def merge(data, l, mid, h):
     res = []
-    i, j = 0, 0  # Left index, right index
-    while j < len(r) and i < len(l):
-        if r[j] > l[i]:
-            res.append(l[i])
+    i, j = l, mid + 1  # Indices (left, right)
+    while i <= mid and j <= h:
+        if data[i] < data[j]:
+            res.append(data[i])
             i += 1
         else:
-            res.append(r[j])
+            res.append(data[j])
             j += 1
-        print((mid, res,(data[mid:], data[:mid])), file=file)
-    res.extend(r[j:])
-    res.extend(l[i:])
-    return res
+    while i <= mid:
+        res.append(data[i])
+        i += 1
+    while j <= mid:
+        res.append(data[j])
+        j += 1
+    
+    for i in range(len(res)):
+        data[l+i] = res[i]
+        yield data
 
-if __name__ == "__main__":
-    a = mergesort([38, 27, 43, 3, 9, 82, 10])
-    for i in a:
-        print(i)
+
+def mergesort(data, l, h):
+    if l >= h:
+        return
+    
+    mid_ind = (l + h) // 2
+   
+    yield from mergesort(data, l, mid_ind)
+    yield from mergesort(data, mid_ind + 1, h)
+    yield from merge(data, l, mid_ind, h)
 
