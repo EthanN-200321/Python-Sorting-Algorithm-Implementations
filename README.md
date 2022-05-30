@@ -11,4 +11,6 @@ In order to run the sorting algorithm visualizer, clone the repository and run `
 
 ## repl.it
 This project can also be found at:
+https://replit.com/@EthanN-200321/Python-Sorting-Algorithm-Implementations
+*Please note that the execution time of `visualizer.py` may be very long due to the video rendering.*
 
