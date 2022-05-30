@@ -20,8 +20,10 @@ def bucketsort(data, n):
         else:
             buckets[len(data) - 1].append(data[i])
 
+    # Insertion Sort on buckets
     for i in range(n):
         buckets[i] = _insertionsort(buckets[i])
+
 
     a = []
     for bucket in buckets:
@@ -32,5 +34,6 @@ def bucketsort(data, n):
 if __name__ == "__main__":
     a = [5, 4, 3, 2, 1, 6]
     n = bucketsort(a, len(a))
-    print(n)
+    for i in n:
+        print(i)
 

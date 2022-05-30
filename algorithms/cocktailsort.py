@@ -6,7 +6,7 @@ def cocktailsort(data):
     while swp:  # Loop until no swaps occur
         swp = False
         for i in range(start, end):  # Forward Iteration
-            yield data
+            yield list(data)
             if data[i] > data[i+1]:
                 data[i], data[i+1] = data[i+1], data[i]
                 swp = True
@@ -15,7 +15,7 @@ def cocktailsort(data):
             break
 
         for i in range(end-1, start-1, -1):  # Backward iteration
-            yield data
+            yield list(data)
             if data[i] > data[i+1]:
                 data[i], data[i+1] = data[i+1], data[i]
                 swp = True

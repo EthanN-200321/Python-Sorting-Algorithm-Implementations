@@ -5,12 +5,7 @@ def insertionsort(data):
         while j >= 0 and data[j] > temp:
             data[j + 1], data[j] = data[j], data[j + 1]
             j -= 1
-            yield data
+            yield list(data)
         data[j + 1], data[data.index(temp)] = data[data.index(temp)], data[j + 1]
-        yield data
-
-if __name__ == "__main__":
-    a = insertionsort([4, 3, 2, 1])
-    for i in a:
-        print(i)
+        yield list(data)
 

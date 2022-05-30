@@ -1,11 +1,11 @@
 -- Algorithms --
 * Bogosort - 
-* Insertion Sort -
-* Selection Sort - 
-* Merge Sort - 
-* Bubble sort  -
-* Gnome Sort - 
-* Shell sort - (NEEDS VISUALIZATION)
-* Cocktail sort -
 * Bozo sort -
+* Bubble sort  -
+* Bucket sort
+* Cocktail sort -
+* Gnome Sort - 
+* Insertion Sort -
+* Merge Sort - 
+* Selection Sort - 
 * Quick sort - 
