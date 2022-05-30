@@ -35,7 +35,6 @@ def visualize(algo, data, nums):
         generator = insertionsort(data)
     if algo == 7:
         titlestr = "QuickSort"
-        temp_data = data  # Duplicating data, as the quick sort implementation runs in-place
         generator = quicksort(data, 0, len(data) - 1)
     if algo == 8:
         titlestr = "Selection Sort"
@@ -97,4 +96,3 @@ if __name__ == "__main__":
     
     # Generate animations
     visualize(algo=algo, data=data, nums=nums)
-
