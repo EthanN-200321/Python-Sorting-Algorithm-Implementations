@@ -8,9 +8,3 @@ In order to run the sorting algorithm visualizer, clone the repository and run `
 *Note that this set of sorting algorithms was developed with these specific versions, and that other versions have not been tested*
 - Python 3.10.4+
 - Matplotlib 3.5.2+
-
-## repl.it
-This project can also be found at:
-https://replit.com/@EthanN-200321/Python-Sorting-Algorithm-Implementations
-*Please note that the execution time of `visualizer.py` may be very long due to the video rendering.*
-
